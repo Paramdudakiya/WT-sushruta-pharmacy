@@ -1,0 +1,620 @@
+```html
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>Dashboard · Sushruta Admin</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Admin CSS -->
+    <link
+        href="admin.css"
+        rel="stylesheet"
+    >
+    <script src="../auth.js"></script>
+    <script>SushrutaAuth.requireRole('admin');</script>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ADMIN SHELL
+    ====================================================== -->
+
+    <div class="admin-shell">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside
+            class="admin-sidebar"
+            id="admin-menu"
+        >
+
+            <!-- Brand -->
+            <a
+                class="admin-brand"
+                href="dashboard.html"
+            >
+                <span class="brand-mark">
+                    <i class="bi bi-capsule-pill"></i>
+                </span>
+
+                <span>
+                    <span class="brand-title d-block">
+                        Sushruta
+                    </span>
+
+                    <span class="brand-subtitle d-block">
+                        Pharmacy Admin
+                    </span>
+                </span>
+            </a>
+
+
+            <!-- Navigation -->
+            <nav class="admin-nav">
+
+                <a
+                    class="nav-link active"
+                    href="dashboard.html"
+                >
+                    <i class="bi bi-grid-1x2"></i>
+                    Dashboard
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="products.html"
+                >
+                    <i class="bi bi-box-seam"></i>
+                    Products
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="categories.html"
+                >
+                    <i class="bi bi-diagram-3"></i>
+                    Categories
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="users.html"
+                >
+                    <i class="bi bi-people"></i>
+                    Users
+                </a>
+
+                <a
+                    class="nav-link"
+                    href="orders.html"
+                >
+                    <i class="bi bi-cart3"></i>
+                    Orders
+                </a>
+
+            </nav>
+
+
+            <!-- Sidebar Footer -->
+            <div class="admin-sidebar-footer">
+
+                <a
+                    class="help-link"
+                    href="#"
+                >
+                    <i class="bi bi-question-circle"></i>
+                    Help &amp; Support
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+        ================================================== -->
+
+        <main class="admin-main">
+
+
+            <!-- =================================================
+                 TOPBAR
+            ================================================== -->
+
+            <header class="admin-topbar">
+
+                <!-- Search -->
+                <div class="d-flex align-items-center gap-2 w-100">
+
+                    <!-- Mobile Menu -->
+                    <a
+                        href="#admin-menu"
+                        class="topbar-icon mobile-toggle text-decoration-none"
+                    >
+                        <i class="bi bi-list"></i>
+                    </a>
+
+
+                    <!-- Search Box -->
+                    <label class="topbar-search">
+
+                        <i class="bi bi-search"></i>
+
+                        <input
+                            class="form-control"
+                            type="search"
+                            aria-label="Search"
+                            placeholder="Search orders, products, or customers..."
+                        >
+
+                    </label>
+
+                </div>
+
+
+                <!-- Topbar Actions -->
+                <div class="topbar-actions">
+
+                    <!-- Notification -->
+                    <button
+                        class="topbar-icon"
+                        type="button"
+                        aria-label="Notifications"
+                    >
+                        <i class="bi bi-bell"></i>
+                    </button>
+
+
+                    <!-- Admin Profile -->
+                    <div class="admin-profile">
+
+                        <span class="profile-avatar">
+                            PD
+                        </span>
+
+                        <span class="profile-copy">
+
+                            <strong>
+                                Param Dudakiya
+                            </strong>
+
+                            <span>
+                                Administrator
+                            </span>
+
+                        </span>
+
+                    </div>
+
+                    <button class="topbar-icon" type="button" onclick="SushrutaAuth.logout()" aria-label="Log out" title="Log out">
+                        <i class="bi bi-box-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 DASHBOARD CONTENT
+            ================================================== -->
+
+            <section class="admin-content">
+
+
+                <!-- =================================================
+                     PAGE HEADING
+                ================================================== -->
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <h1>
+                            Dashboard Overview
+                        </h1>
+
+                        <p>
+                            Here's what's happening at Sushruta
+                            Pharmacy today.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Export Button -->
+                    <button
+                        type="button"
+                        class="btn btn-admin btn-admin-outline"
+                    >
+                        <i class="bi bi-download"></i>
+                        Export Report
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     STATISTICS
+                ================================================== -->
+
+                <div class="row g-3 mb-4">
+
+
+                    <!-- Today's Orders -->
+                    <div class="col-12 col-sm-6 col-xl-3">
+
+                        <article class="stat-card">
+
+                            <div class="stat-card-top">
+
+                                <span class="stat-label">
+                                    Today's Orders
+                                </span>
+
+                                <span class="stat-icon">
+                                    <i class="bi bi-bag-check"></i>
+                                </span>
+
+                            </div>
+
+                            <div class="stat-value">
+                                342
+                            </div>
+
+                            <div class="stat-note">
+
+                                <span class="trend-up">
+                                    <i class="bi bi-arrow-up"></i>
+                                    5.2%
+                                </span>
+
+                                from yesterday
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Today's Revenue -->
+                    <div class="col-12 col-sm-6 col-xl-3">
+
+                        <article class="stat-card dashboard-revenue">
+
+                            <div class="stat-card-top">
+
+                                <span class="stat-label">
+                                    Today's Revenue
+                                </span>
+
+                                <span class="stat-icon">
+                                    <i class="bi bi-wallet2"></i>
+                                </span>
+
+                            </div>
+
+                            <div class="stat-value">
+                                ₹48,620
+                            </div>
+
+                            <div class="stat-note">
+
+                                <span class="trend-up">
+                                    <i class="bi bi-arrow-up"></i>
+                                    8.6%
+                                </span>
+
+                                from yesterday
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Low Stock Items -->
+                    <div class="col-12 col-sm-6 col-xl-3">
+
+                        <article class="stat-card">
+
+                            <div class="stat-card-top">
+
+                                <span class="stat-label">
+                                    Low Stock Items
+                                </span>
+
+                                <span class="stat-icon">
+                                    <i class="bi bi-exclamation-triangle"></i>
+                                </span>
+
+                            </div>
+
+                            <div class="stat-value">
+                                28
+                            </div>
+
+                            <div class="stat-note">
+
+                                <span class="trend-down">
+                                    <i class="bi bi-arrow-down"></i>
+                                    2
+                                </span>
+
+                                items since last week
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- New Customers -->
+                    <div class="col-12 col-sm-6 col-xl-3">
+
+                        <article class="stat-card">
+
+                            <div class="stat-card-top">
+
+                                <span class="stat-label">
+                                    New Customers
+                                </span>
+
+                                <span class="stat-icon">
+                                    <i class="bi bi-person-plus"></i>
+                                </span>
+
+                            </div>
+
+                            <div class="stat-value">
+                                64
+                            </div>
+
+                            <div class="stat-note">
+
+                                <span class="trend-up">
+                                    <i class="bi bi-arrow-up"></i>
+                                    12.4%
+                                </span>
+
+                                from last week
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     RECENT ORDERS
+                ================================================== -->
+
+                <article class="admin-card">
+
+
+                    <!-- Card Header -->
+                    <div class="admin-card-head">
+
+                        <h2 class="admin-card-title">
+                            Recent Orders
+                        </h2>
+
+                        <a
+                            class="card-link"
+                            href="orders.html"
+                        >
+                            View All
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <!-- Orders Table -->
+                    <div class="table-responsive">
+
+                        <table class="table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Order ID
+                                    </th>
+
+                                    <th>
+                                        Date
+                                    </th>
+
+                                    <th>
+                                        Customer
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th class="text-end">
+                                        Amount
+                                    
+
+                            </thead>
+
+
+                            <tbody>
+
+
+                                <!-- Order 1 -->
+
+                                <tr>
+
+                                    <td class="table-mono">
+                                        #ORD-0921
+                                    </td>
+
+                                    <td>
+                                        24 Oct, 2026
+                                    </td>
+
+                                    <td>
+                                        <span class="table-name">
+                                            Metro General Hospital
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-badge status-processing">
+                                            Processing
+                                        </span>
+                                    </td>
+
+                                    <td class="text-end table-mono">
+                                        ₹12,240.00
+                                    </td>
+
+
+                                <!-- Order 2 -->
+
+                                <tr>
+
+                                    <td class="table-mono">
+                                        #ORD-0920
+                                    </td>
+
+                                    <td>
+                                        24 Oct, 2026
+                                    </td>
+
+                                    <td>
+                                        <span class="table-name">
+                                            Dr. Yogi Gajjar
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-badge status-completed">
+                                            Completed
+                                        </span>
+                                    </td>
+
+                                    <td class="text-end table-mono">
+                                        ₹4,450.50
+                                    </td>
+
+                                    
+
+                                </tr>
+
+
+                                <!-- Order 3 -->
+
+                                <tr>
+
+                                    <td class="table-mono">
+                                        #ORD-0919
+                                    </td>
+
+                                    <td>
+                                        23 Oct, 2026
+                                    </td>
+
+                                    <td>
+                                        <span class="table-name">
+                                            Sunrise Care Home
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-badge status-processing">
+                                            Processing
+                                        </span>
+                                    </td>
+
+                                    <td class="text-end table-mono">
+                                        ₹8,890.25
+                                    </td>
+
+
+                                </tr>
+
+
+                                <!-- Order 4 -->
+
+                                <tr>
+
+                                    <td class="table-mono">
+                                        #ORD-0918
+                                    </td>
+
+                                    <td>
+                                        23 Oct, 2026
+                                    </td>
+
+                                    <td>
+                                        <span class="table-name">
+                                            Parth Pharmacy
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-badge status-completed">
+                                            Completed
+                                        </span>
+                                    </td>
+
+                                    <td class="text-end table-mono">
+                                        ₹21,100.00
+                                    </td>
+
+                                    
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
+```

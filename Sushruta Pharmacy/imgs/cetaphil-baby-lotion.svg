@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 320" width="100%" height="100%">
+  <defs>
+    <filter id="cetaShad" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Cetaphil Baby Bottle with Pump -->
+  <g transform="translate(45, 15)" filter="url(#cetaShad)">
+    <!-- Blue Pump -->
+    <rect x="74" y="0" width="12" height="28" fill="#0288d1"/>
+    <path d="M 40 12 L 80 12 C 85 12 90 15 90 22 L 70 22 Z" fill="#0288d1"/>
+    <rect x="68" y="28" width="24" height="12" rx="2" fill="#01579b"/>
+
+    <!-- Bottle Body -->
+    <path d="M 28 80 C 28 48, 50 42, 80 42 C 110 42, 132 48, 132 80 L 136 245 C 136 270, 120 280, 80 280 C 40 280, 24 270, 24 245 Z" fill="#ffffff" stroke="#e0e7ff" stroke-width="2"/>
+    
+    <!-- Cetaphil Oval Logo -->
+    <g transform="translate(50, 95)">
+      <ellipse cx="30" cy="16" rx="26" ry="14" fill="#0288d1" />
+      <text x="30" y="21" font-family="'Outfit', sans-serif" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">Cetaphil</text>
+    </g>
+
+    <!-- Baby text and graphic -->
+    <text x="80" y="145" font-family="'Outfit', sans-serif" font-size="16" font-weight="800" fill="#ffb300" text-anchor="middle">baby</text>
+    <g transform="translate(68, 155)">
+      <circle cx="12" cy="12" r="10" fill="#e1f5fe"/>
+      <path d="M 6 12 C 8 8, 16 8, 18 12" stroke="#0288d1" stroke-width="2" fill="none"/>
+    </g>
+    <text x="80" y="195" font-family="'Outfit', sans-serif" font-size="10" font-weight="700" fill="#1e293b" text-anchor="middle">Daily Lotion</text>
+    <text x="80" y="210" font-family="'Outfit', sans-serif" font-size="8" font-weight="500" fill="#64748b" text-anchor="middle">With Organic Calendula</text>
+    <text x="80" y="235" font-family="'Outfit', sans-serif" font-size="9" font-weight="700" fill="#0288d1" text-anchor="middle">400 ml</text>
+  </g>
+</svg>

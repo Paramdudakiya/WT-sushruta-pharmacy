@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 320" width="100%" height="100%">
+  <defs>
+    <filter id="cardShad" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Sebamed White Pump Bottle -->
+  <g transform="translate(45, 15)" filter="url(#cardShad)">
+    <!-- Pump Dispenser -->
+    <rect x="74" y="0" width="12" height="28" fill="#1e88e5"/>
+    <path d="M 40 10 L 80 10 C 85 10 90 14 90 20 L 70 20 Z" fill="#1e88e5"/>
+    <rect x="70" y="28" width="20" height="12" rx="2" fill="#0d47a1"/>
+    
+    <!-- Bottle Body -->
+    <path d="M 30 75 C 30 45, 50 40, 80 40 C 110 40, 130 45, 130 75 L 135 245 C 135 270, 120 280, 80 280 C 40 280, 25 270, 25 245 Z" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+    
+    <!-- Label -->
+    <rect x="36" y="90" width="88" height="135" rx="8" fill="#ffffff"/>
+    <rect x="44" y="105" width="40" height="14" rx="2" fill="#d81b60"/>
+    <text x="64" y="116" font-family="'Outfit', sans-serif" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">sebamed</text>
+    <rect x="88" y="105" width="24" height="14" rx="2" fill="#1e88e5"/>
+    <text x="50" y="140" font-family="'Outfit', sans-serif" font-size="11" font-weight="700" fill="#1e3a8a">BABY</text>
+    <text x="50" y="155" font-family="'Outfit', sans-serif" font-size="9" font-weight="500" fill="#64748b">BODY LOTION</text>
+    <line x1="45" y1="168" x2="115" y2="168" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="80" y="185" font-family="'Outfit', sans-serif" font-size="8" font-weight="600" fill="#059669" text-anchor="middle">pH 5.5</text>
+    <text x="80" y="202" font-family="'Outfit', sans-serif" font-size="9" font-weight="600" fill="#334155" text-anchor="middle">400 ml</text>
+  </g>
+</svg>

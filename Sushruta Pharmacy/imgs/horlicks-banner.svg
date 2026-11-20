@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b419c"/>
+      <stop offset="60%" stop-color="#0e56c7"/>
+      <stop offset="100%" stop-color="#1976d2"/>
+    </linearGradient>
+    <linearGradient id="chocSplash" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8d5b4c"/>
+      <stop offset="100%" stop-color="#4a2511"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="5" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Banner Background with Rounded Corners -->
+  <rect width="600" height="320" rx="24" fill="url(#blueGrad)"/>
+
+  <!-- Chocolate Splash Waves on the Left -->
+  <path d="M 0 320 Q 50 160 30 110 Q 50 180 80 200 Q 110 90 90 40 Q 120 150 140 220 Q 170 120 200 160 Q 230 240 260 320 Z" fill="url(#chocSplash)" opacity="0.9"/>
+  <circle cx="50" cy="80" r="10" fill="#6d3920" />
+  <circle cx="110" cy="30" r="8" fill="#582a15" />
+  <circle cx="160" cy="90" r="6" fill="#753d23" />
+
+  <!-- Chocolate Tumbler/Glass -->
+  <g transform="translate(30, 160)" filter="url(#shadow)">
+    <path d="M 10 30 L 25 150 L 75 150 L 90 30 Z" fill="#8d5b4c"/>
+    <path d="M 12 30 C 30 20, 70 20, 88 30 C 70 40, 30 40, 12 30 Z" fill="#b07d62"/>
+    <!-- Drink froth -->
+    <path d="M 2 30 Q 30 5 60 15 Q 85 -5 95 30 Z" fill="#d7a15c"/>
+  </g>
+
+  <!-- Blue Classic Horlicks Bottle -->
+  <g transform="translate(100, 110)" filter="url(#shadow)">
+    <rect x="0" y="20" width="65" height="180" rx="16" fill="#003580"/>
+    <rect x="12" y="0" width="40" height="25" rx="5" fill="#f58220"/>
+    <rect x="5" y="55" width="55" height="100" rx="6" fill="#ffffff"/>
+    <text x="32" y="105" font-family="'Outfit', sans-serif" font-weight="900" font-size="16" fill="#003580" text-anchor="middle" transform="rotate(-90 32 105)">Horlicks</text>
+  </g>
+
+  <!-- Orange / Chocolate Horlicks Bottle -->
+  <g transform="translate(170, 120)" filter="url(#shadow)">
+    <rect x="0" y="20" width="60" height="170" rx="16" fill="#f58220"/>
+    <rect x="12" y="0" width="36" height="25" rx="5" fill="#003580"/>
+    <rect x="5" y="50" width="50" height="95" rx="6" fill="#ffffff"/>
+    <text x="30" y="98" font-family="'Outfit', sans-serif" font-weight="900" font-size="14" fill="#f58220" text-anchor="middle" transform="rotate(-90 30 98)">Horlicks</text>
+  </g>
+
+  <!-- Women's Pink Horlicks Bottle -->
+  <g transform="translate(235, 135)" filter="url(#shadow)">
+    <rect x="0" y="18" width="55" height="155" rx="14" fill="#d81b60"/>
+    <rect x="10" y="0" width="34" height="22" rx="4" fill="#f8bbd0"/>
+    <rect x="4" y="45" width="46" height="85" rx="5" fill="#ffffff"/>
+    <text x="27" y="88" font-family="'Outfit', sans-serif" font-weight="900" font-size="12" fill="#d81b60" text-anchor="middle" transform="rotate(-90 27 88)">Horlicks</text>
+  </g>
+
+  <!-- Typography Right Side -->
+  <g transform="translate(320, 110)">
+    <text x="0" y="40" font-family="'Outfit', sans-serif" font-size="44" font-weight="800" fill="#ffffff" letter-spacing="-0.5">Horlicks</text>
+    <text x="0" y="80" font-family="'Outfit', 'Georgia', serif" font-size="18" font-weight="500" fill="#ffffff" opacity="0.95">A Flavored Health Drink</text>
+    <text x="0" y="106" font-family="'Outfit', 'Georgia', serif" font-size="18" font-weight="500" fill="#ffffff" opacity="0.95">With Nutritional Benefits</text>
+  </g>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 320" width="100%" height="100%">
+  <defs>
+    <filter id="packShad" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Apollo Diaper Pack -->
+  <g transform="translate(30, 25)" filter="url(#packShad)">
+    <!-- Main Polybag -->
+    <rect x="0" y="20" width="190" height="240" rx="14" fill="#6a1b9a"/>
+    <rect x="0" y="20" width="190" height="40" rx="14" fill="#4a148c"/>
+    <!-- Handle -->
+    <path d="M 65 20 C 65 0, 125 0, 125 20" stroke="#7e57c2" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+    <!-- Front panel graphic -->
+    <rect x="15" y="70" width="160" height="175" rx="8" fill="#ffffff"/>
+    
+    <!-- Cartoon Giraffe -->
+    <g transform="translate(45, 80)">
+      <!-- Head and neck -->
+      <path d="M 25 35 Q 25 70 20 100 L 50 100 Q 45 70 45 35 Z" fill="#ffa726"/>
+      <circle cx="35" cy="30" r="22" fill="#ffa726"/>
+      <!-- Eyes and ears -->
+      <circle cx="28" cy="25" r="4" fill="#ffffff"/>
+      <circle cx="28" cy="25" r="2" fill="#212121"/>
+      <circle cx="42" cy="25" r="4" fill="#ffffff"/>
+      <circle cx="42" cy="25" r="2" fill="#212121"/>
+      <!-- Horns -->
+      <line x1="26" y1="12" x2="22" y2="2" stroke="#e65100" stroke-width="3"/>
+      <circle cx="22" cy="2" r="3" fill="#e65100"/>
+      <line x1="44" y1="12" x2="48" y2="2" stroke="#e65100" stroke-width="3"/>
+      <circle cx="48" cy="2" r="3" fill="#e65100"/>
+      <!-- Spots -->
+      <circle cx="32" cy="65" r="5" fill="#e65100"/>
+      <circle cx="38" cy="85" r="4" fill="#e65100"/>
+    </g>
+
+    <!-- Apollo Brand & Diaper text -->
+    <rect x="25" y="185" width="140" height="22" rx="4" fill="#ff9800"/>
+    <text x="95" y="200" font-family="'Outfit', sans-serif" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">APOLLO ESSENTIALS</text>
+    <text x="95" y="222" font-family="'Outfit', sans-serif" font-size="9" font-weight="700" fill="#4a148c" text-anchor="middle">XTRA ABSORB PANTS</text>
+    <text x="95" y="235" font-family="'Outfit', sans-serif" font-size="8" font-weight="600" fill="#e65100" text-anchor="middle">LARGE - 82 COUNT</text>
+  </g>
+</svg>

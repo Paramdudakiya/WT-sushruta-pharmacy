@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Orders · Sushruta Admin</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Admin CSS -->
+    <link href="admin.css" rel="stylesheet">
+    <script src="../auth.js"></script>
+    <script>SushrutaAuth.requireRole('admin');</script>
+</head>
+
+<body>
+
+    <div class="admin-shell">
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+        <aside class="admin-sidebar" id="admin-menu">
+
+            <!-- Brand -->
+            <a class="admin-brand" href="dashboard.html">
+
+                <span class="brand-mark">
+                    <i class="bi bi-capsule-pill"></i>
+                </span>
+
+                <span>
+                    <span class="brand-title d-block">
+                        Sushruta
+                    </span>
+
+                    <span class="brand-subtitle d-block">
+                        Pharmacy Admin
+                    </span>
+                </span>
+
+            </a>
+
+            <!-- Navigation -->
+            <nav class="admin-nav">
+
+                <a class="nav-link" href="dashboard.html">
+                    <i class="bi bi-grid-1x2"></i>
+                    Dashboard
+                </a>
+
+                <a class="nav-link" href="products.html">
+                    <i class="bi bi-box-seam"></i>
+                    Products
+                </a>
+
+                <a class="nav-link" href="categories.html">
+                    <i class="bi bi-diagram-3"></i>
+                    Categories
+                </a>
+
+                <a class="nav-link" href="users.html">
+                    <i class="bi bi-people"></i>
+                    Users
+                </a>
+
+                <a class="nav-link active" href="orders.html">
+                    <i class="bi bi-cart3"></i>
+                    Orders
+                </a>
+
+            </nav>
+
+            <!-- Sidebar Footer -->
+            <div class="admin-sidebar-footer">
+
+                <a class="help-link" href="#">
+                    <i class="bi bi-question-circle"></i>
+                    Help &amp; Support
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================================
+             MAIN CONTENT
+        ====================================================== -->
+        <main class="admin-main">
+
+            <!-- =================================================
+                 TOPBAR
+            ================================================== -->
+            <header class="admin-topbar">
+
+                <!-- Search Area -->
+                <div class="d-flex align-items-center gap-2 w-100">
+
+                    <!-- Mobile Menu Button -->
+                    <a
+                        href="#admin-menu"
+                        class="topbar-icon mobile-toggle text-decoration-none"
+                    >
+                        <i class="bi bi-list"></i>
+                    </a>
+
+                    <!-- Search -->
+                    <label class="topbar-search">
+
+                        <i class="bi bi-search"></i>
+
+                        <input
+                            class="form-control"
+                            aria-label="Search"
+                            placeholder="Search orders…"
+                        >
+
+                    </label>
+
+                </div>
+
+
+                <!-- Topbar Actions -->
+                <div class="topbar-actions">
+
+                    <!-- Notification -->
+                    <button
+                        class="topbar-icon"
+                        aria-label="Notifications"
+                    >
+                        <i class="bi bi-bell"></i>
+                    </button>
+
+
+                    <!-- Admin Profile -->
+                    <div class="admin-profile">
+
+                        <span class="profile-avatar">
+                            PD
+                        </span>
+
+                        <span class="profile-copy">
+
+                            <strong>
+                                Param Dudakiya
+                            </strong>
+
+                            <span>
+                                Administrator
+                            </span>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 PAGE CONTENT
+            ================================================== -->
+            <section class="admin-content">
+
+
+                <!-- =================================================
+                     PAGE HEADING
+                ================================================== -->
+                <div class="page-heading">
+
+                    <div>
+
+                        <h1>
+                            Order Management
+                        </h1>
+
+                        <p>
+                            View and manage prescription fulfilments
+                            and sales orders.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Heading Actions -->
+                    <div class="d-flex gap-2 flex-wrap">
+
+                        <button class="btn btn-admin btn-admin-outline">
+
+                            <i class="bi bi-download"></i>
+                            Export CSV
+
+                        </button>
+
+                        <button class="btn btn-admin btn-admin-primary">
+
+                            <i class="bi bi-plus-lg"></i>
+                            Create Order
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     ORDER STATISTICS
+                ================================================== -->
+                <div class="row g-3 mb-4">
+
+
+                    <!-- Open Orders -->
+                    <div class="col-md-4">
+
+                        <article class="stat-card">
+
+                            <span class="stat-label">
+                                Open Orders
+                            </span>
+
+                            <div class="stat-value">
+                                42
+                            </div>
+
+                            <div class="stat-note">
+                                Awaiting fulfillment
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Ready for Pickup -->
+                    <div class="col-md-4">
+
+                        <article class="stat-card">
+
+                            <span class="stat-label">
+                                Ready for Pickup
+                            </span>
+
+                            <div class="stat-value">
+                                16
+                            </div>
+
+                            <div class="stat-note">
+                                Customer notification sent
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Completed Today -->
+                    <div class="col-md-4">
+
+                        <article class="stat-card">
+
+                            <span class="stat-label">
+                                Completed Today
+                            </span>
+
+                            <div class="stat-value">
+                                127
+                            </div>
+
+                            <div class="stat-note">
+
+                                <span class="trend-up">
+                                    <i class="bi bi-arrow-up"></i>
+                                    9.1%
+                                </span>
+
+                                over yesterday
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     ORDERS TABLE CARD
+                ================================================== -->
+                <article class="admin-card">
+
+
+                    <!-- Table Toolbar -->
+                    <div class="table-toolbar">
+
+
+                        <!-- Status Filter -->
+                        <button class="filter-chip">
+
+                            All Statuses
+
+                            <i class="bi bi-chevron-down ms-2"></i>
+
+                        </button>
+
+
+                        <!-- Date Filter -->
+                        <button class="filter-chip">
+
+                            <i class="bi bi-calendar3 me-1"></i>
+
+                            Last 7 Days
+
+                            <i class="bi bi-chevron-down ms-2"></i>
+
+                        </button>
+
+
+                        <!-- Spacer -->
+                        <span class="toolbar-spacer"></span>
+
+
+                        <!-- Order Search -->
+                        <div class="search-products">
+
+                            <i class="bi bi-search"></i>
+
+                            <input
+                                class="form-control"
+                                placeholder="Find order…"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         ORDERS TABLE
+                    ================================================== -->
+                    <div class="table-responsive">
+
+                        <table class="table">
+
+                            <!-- Table Header -->
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Order ID
+                                    </th>
+
+                                    <th>
+                                        Customer
+                                    </th>
+
+                                    <th>
+                                        Date
+                                    </th>
+
+                                    <th>
+                                        Items
+                                    </th>
+
+                                    <th>
+                                        Total
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th class="text-end">
+                                        Actions
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <!-- Table Body -->
+                            <tbody>
+
+
+                                <!-- =================================================
+                                     ORDER 8923
+                                ================================================== -->
+                                <tr>
+
+                                    <td class="table-mono">
+                                        ORD-8923
+                                    </td>
+
+                                    <td>
+
+                                        <span class="table-name d-block">
+                                            Jay Patel
+                                        </span>
+
+                                        <span class="table-subtext">
+                                            ID: CUS-442
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        24 Oct, 2026
+                                    </td>
+
+                                    <td>
+                                        3 items
+                                    </td>
+
+                                    <td class="table-mono">
+                                        ₹142.50
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status-badge status-processing">
+                                            Processing
+                                        </span>
+
+                                    </td>
+
+                                    <td class="text-end">
+
+                                        <button class="action-btn">
+                                            <i class="bi bi-three-dots"></i>
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- =================================================
+                                     ORDER 8924
+                                ================================================== -->
+                                <tr>
+
+                                    <td class="table-mono">
+                                        ORD-8924
+                                    </td>
+
+                                    <td>
+
+                                        <span class="table-name d-block">
+                                            Meera Joshi
+                                        </span>
+
+                                        <span class="table-subtext">
+                                            ID: CUS-911
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        24 Oct, 2026
+                                    </td>
+
+                                    <td>
+                                        1 item
+                                    </td>
+
+                                    <td class="table-mono">
+                                        ₹45.00
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status-badge status-pending">
+                                            Pending Review
+                                        </span>
+
+                                    </td>
+
+                                    <td class="text-end">
+
+                                        <button class="action-btn">
+                                            <i class="bi bi-three-dots"></i>
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- =================================================
+                                     ORDER 8925
+                                ================================================== -->
+                                <tr>
+
+                                    <td class="table-mono">
+                                        ORD-8925
+                                    </td>
+
+                                    <td>
+
+                                        <span class="table-name d-block">
+                                            Parth Patel
+                                        </span>
+
+                                        <span class="table-subtext">
+                                            ID: CUS-208
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        23 Oct, 2026
+                                    </td>
+
+                                    <td>
+                                        5 items
+                                    </td>
+
+                                    <td class="table-mono">
+                                        ₹310.20
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status-badge status-ready">
+                                            Ready for Pickup
+                                        </span>
+
+                                    </td>
+
+                                    <td class="text-end">
+
+                                        <button class="action-btn">
+                                            <i class="bi bi-three-dots"></i>
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- =================================================
+                                     ORDER 8926
+                                ================================================== -->
+                                <tr>
+
+                                    <td class="table-mono">
+                                        ORD-8926
+                                    </td>
+
+                                    <td>
+
+                                        <span class="table-name d-block">
+                                            Priya Shah
+                                        </span>
+
+                                        <span class="table-subtext">
+                                            ID: CUS-773
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        23 Oct, 2026
+                                    </td>
+
+                                    <td>
+                                        2 items
+                                    </td>
+
+                                    <td class="table-mono">
+                                        ₹88.90
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status-badge status-completed">
+                                            Completed
+                                        </span>
+
+                                    </td>
+
+                                    <td class="text-end">
+
+                                        <button class="action-btn">
+                                            <i class="bi bi-three-dots"></i>
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- =================================================
+                                     ORDER 8927
+                                ================================================== -->
+                                <tr>
+
+                                    <td class="table-mono">
+                                        ORD-8927
+                                    </td>
+
+                                    <td>
+
+                                        <span class="table-name d-block">
+                                            Nisha Patel
+                                        </span>
+
+                                        <span class="table-subtext">
+                                            ID: CUS-139
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+                                        22 Oct, 2026
+                                    </td>
+
+                                    <td>
+                                        4 items
+                                    </td>
+
+                                    <td class="table-mono">
+                                        ₹1,250.00
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status-badge status-completed">
+                                            Completed
+                                        </span>
+
+                                    </td>
+
+                                    <td class="text-end">
+
+                                        <button class="action-btn">
+                                            <i class="bi bi-three-dots"></i>
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         TABLE FOOTER / PAGINATION
+                    ================================================== -->
+                    <div class="table-footer">
+
+                        <span>
+                            Showing <strong>1–5</strong> of 342 orders
+                        </span>
+
+
+                        <nav>
+
+                            <ul class="pagination pagination-sm">
+
+
+                                <!-- Previous -->
+                                <li class="page-item disabled">
+
+                                    <span class="page-link">
+                                        Prev
+                                    </span>
+
+                                </li>
+
+
+                                <!-- Page 1 -->
+                                <li class="page-item active">
+
+                                    <span class="page-link">
+                                        1
+                                    </span>
+
+                                </li>
+
+
+                                <!-- Page 2 -->
+                                <li class="page-item">
+
+                                    <span class="page-link">
+                                        2
+                                    </span>
+
+                                </li>
+
+
+                                <!-- Page 3 -->
+                                <li class="page-item">
+
+                                    <span class="page-link">
+                                        3
+                                    </span>
+
+                                </li>
+
+
+                                <!-- Next -->
+                                <li class="page-item">
+
+                                    <span class="page-link">
+                                        Next
+                                    </span>
+
+                                </li>
+
+                            </ul>
+
+                        </nav>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
